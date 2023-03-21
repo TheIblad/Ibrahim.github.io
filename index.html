@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="links">
+                <img class="logo" src="/Images/placeholder.png" alt="logo">
+                <ul class="links">
+                    <li><a href=".">Home</a></li>
+                    <li><a href="#AboutMe">About Me</a></li>
+                    <li><a href="#AboutMe">Skills</a></li>
+                    <li><a href="#AboutMe">Experience</a></li>
+                    <li><a href="/Portfolio.html">Portfolio</a></li>
+                    <li><a href="/Blog.html">Blog</a></li>
+                    <li><a href="#ContactMe">Contact</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h1 class="header-text-first">Ibrahim</h1>
+                <h1 class="header-text-second">Kharim</h1>
+            </div>
+        </div>
+    </header>
+    <br>
+    <section id="AboutMe">
+        <div id="container">
+            <div id="row">
+                <div class="aboutMe-col-1">
+                    <figure>
+                        <img src="/Images/placeholder.png" alt="">
+                    </figure>
+                    <div class="aboutMe-col-2">
+                        <article>
+                            <h2 class="subtitle">About Me</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, rerum corrupti? Doloribus dolor vel quos totam modi! Provident quas facere distinctio doloremque. Voluptatem magnam eligendi, doloremque nam explicabo eos repellat?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea assumenda quibusdam, minima molestiae quasi ratione placeat architecto nulla excepturi eligendi aliquam, quo at alias provident dolore pariatur fugiat animi itaque.</p>
+                        </article>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Java</span><br>Writing code using Object oriented programming</li>
+                                <li><span>Front End Web Development</span><br>Designing and creating websites</li>
+                                <li><span>Python</span><br>Making programs to do automated tasks</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li><span>Sorry .... No Experience Yet</span><br>N/A</li>
+                                <li><span></span><br></li>
+                                <li><span></span><br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2022 - Present</span><br>MSci Computer Science</li>
+                                <li><span>2020 - 2022</span><br>A levels at Newham Collegiate Sixth Form Centre</li>
+                                <li><span>2015 - 2020</span><br>GCSEs at Lister Community School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h2 id="ContactMe" class="subtitle">Contact Me</h2>
+                    <p><i class="fa fa-envelope"></i>IbrahimKharimWork@gmail.com</p>
+                    <p><i class="fa fa-phone-square"></i>07305764335</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/ibrahim-kharim/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        <a href="https://github.com/TheIblad"><i class="fa fa-github" aria-hidden="true"></i></i></a>
+                        <a href=""><i class="fa fa-codepen" aria-hidden="true"></i></i></a>
+                    </div>
+                    <a href="/Document/Ibrahim Kharim's CV.pdf" download class="btn btn2 cv">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Made by Ibrahim Kharim</p>
+    </footer>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
