@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Homepage</title>
-    <link rel="stylesheet" href="/CSS/reset.css">
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="CSS/mobile.css">
 </head>
 <body>
     <header id="header">
         <div class="container">
             <nav class="links">
-                <img class="logo" src="/Images/placeholder.png" alt="logo">
+                <img class="logo" src="Images/placeholder.png" alt="logo">
                 <ul class="links">
                     <li><a href=".">Home</a></li>
                     <li><a href="#AboutMe">About Me</a></li>
                     <li><a href="#AboutMe">Skills</a></li>
                     <li><a href="#AboutMe">Experience</a></li>
-                    <li><a href="/Portfolio.html">Portfolio</a></li>
-                    <li><a href="/Blog.html">Blog</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="viewBlog.php">Blog</a></li>
                     <li><a href="#ContactMe">Contact</a></li>
                 </ul>
             </nav>
@@ -36,7 +37,7 @@
             <div id="row">
                 <div class="aboutMe-col-1">
                     <figure>
-                        <img src="/Images/placeholder.png" alt="">
+                        <img src="Images/placeholder.png" alt="">
                     </figure>
                     <div class="aboutMe-col-2">
                         <article>
@@ -86,14 +87,14 @@
                         <a href="https://github.com/TheIblad"><i class="fa fa-github" aria-hidden="true"></i></i></a>
                         <a href=""><i class="fa fa-codepen" aria-hidden="true"></i></i></a>
                     </div>
-                    <a href="/Document/Ibrahim Kharim's CV.pdf" download class="btn btn2 cv">Download CV</a>
+                    <a href="Document/Ibrahim Kharim's CV.pdf" download class="btn btn2 cv">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form id="form" action="">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" id="content" placeholder="Your Message"></textarea>
+                        <button type="submit" id="postBtn" class="btn btn2">Submit</button>
                     </form>
                 </div>
             </div>
@@ -103,19 +104,7 @@
         <p>Made by Ibrahim Kharim</p>
     </footer>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
+<script src="JS/indexScript.js"></script>
+<script src="JS/blogScript.js"></script>
 </body>
 </html>
